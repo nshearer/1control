@@ -1,0 +1,8 @@
+/.project
+/.pydevproject
+/.externalToolBuilders/Build Qt Objects.launch
+/.settings/org.eclipse.core.resources.prefs
+
+*.pyc
+*~
+/board.yml
