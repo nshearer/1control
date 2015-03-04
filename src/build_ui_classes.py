@@ -32,7 +32,7 @@ if __name__ == '__main__':
                 build = False
                 if not os.path.exists(py_path):
                     build = True
-                if os.stat(ui_path).st_mtime > os.stat(py_path).st_mtime:
+                elif os.stat(ui_path).st_mtime > os.stat(py_path).st_mtime:
                     build = True
                     
                 if not build:

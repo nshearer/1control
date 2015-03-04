@@ -21,17 +21,22 @@ class ServerWindow(QtGui.QMainWindow):
 #         layout.addWidget(self.lineedit)
 #         self.setLayout(layout)
         
-        self.ui.lineedit.selectAll()
-        self.ui.lineedit.setFocus()
+#         self.ui.lineedit.selectAll()
+#         self.ui.lineedit.setFocus()
         
-        self.connect(self.ui.lineedit, QtCore.SIGNAL("returnPressed()"), self.updateUi)
+#         self.connect(self.ui.lineedit, QtCore.SIGNAL("returnPressed()"), self.updateUi)
+#        self.connect(self, QtCore.SIGNAL("key()"), self.updateUi)
         self.setWindowTitle("1 Control")
         
+    def keyPressEvent(self, event):
+        print 'event:', str(event.key())
+        self.ui.last_key.setText(str(event.key()))
         
-    def updateUi(self):
-        try:
-            text = self.ui.lineedit.text()
-            self.ui.browser.append("%s = <b>%s</b>" % (text, eval(text)))
-            self.ui.lineedit.clear()
-        except:
-            self.ui.browser.append("<font color='red'>%s is invalid</font>" % (text))
+        
+#     def updateUi(self):
+#         try:
+#             text = self.ui.lineedit.text()
+#             self.ui.browser.append("%s = <b>%s</b>" % (text, eval(text)))
+#             self.ui.lineedit.clear()
+#         except:
+#             self.ui.browser.append("<font color='red'>%s is invalid</font>" % (text))

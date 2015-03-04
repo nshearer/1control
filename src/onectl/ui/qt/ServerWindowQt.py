@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'N:\HR-ITS4-Documents\Projects\Active Projects\20 - Development\OneControl\src\onectl\ui\qt\ServerWindowQt.ui'
 #
-# Created: Tue Mar 03 18:36:00 2015
+# Created: Wed Mar 04 12:40:27 2015
 #      by: pyside-uic 0.2.15 running on PySide 1.2.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,20 +12,42 @@ from PySide import QtCore, QtGui
 class Ui_ServerWindow(object):
     def setupUi(self, ServerWindow):
         ServerWindow.setObjectName("ServerWindow")
-        ServerWindow.resize(270, 318)
+        ServerWindow.resize(293, 161)
         self.centralwidget = QtGui.QWidget(ServerWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtGui.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
-        self.browser = QtGui.QTextBrowser(self.centralwidget)
-        self.browser.setObjectName("browser")
-        self.gridLayout.addWidget(self.browser, 0, 0, 1, 1)
-        self.lineedit = QtGui.QLineEdit(self.centralwidget)
-        self.lineedit.setObjectName("lineedit")
-        self.gridLayout.addWidget(self.lineedit, 1, 0, 1, 1)
+        self.label = QtGui.QLabel(self.centralwidget)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 2, 1, 1, 1)
+        self.pp_client_status = QtGui.QLabel(self.centralwidget)
+        self.pp_client_status.setObjectName("pp_client_status")
+        self.gridLayout.addWidget(self.pp_client_status, 3, 2, 1, 1)
+        self.vmix_client_status = QtGui.QLabel(self.centralwidget)
+        self.vmix_client_status.setObjectName("vmix_client_status")
+        self.gridLayout.addWidget(self.vmix_client_status, 4, 2, 1, 1)
+        self.label_3 = QtGui.QLabel(self.centralwidget)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout.addWidget(self.label_3, 4, 1, 1, 1)
+        self.label_4 = QtGui.QLabel(self.centralwidget)
+        self.label_4.setObjectName("label_4")
+        self.gridLayout.addWidget(self.label_4, 1, 1, 1, 1)
+        self.ip_address = QtGui.QLineEdit(self.centralwidget)
+        self.ip_address.setEnabled(False)
+        self.ip_address.setObjectName("ip_address")
+        self.gridLayout.addWidget(self.ip_address, 2, 2, 1, 1)
+        self.label_2 = QtGui.QLabel(self.centralwidget)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout.addWidget(self.label_2, 3, 1, 1, 1)
+        self.label_5 = QtGui.QLabel(self.centralwidget)
+        self.label_5.setObjectName("label_5")
+        self.gridLayout.addWidget(self.label_5, 5, 1, 1, 1)
+        self.last_key = QtGui.QLabel(self.centralwidget)
+        self.last_key.setObjectName("last_key")
+        self.gridLayout.addWidget(self.last_key, 5, 2, 1, 1)
         ServerWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(ServerWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 270, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 293, 21))
         self.menubar.setObjectName("menubar")
         ServerWindow.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(ServerWindow)
@@ -37,5 +59,12 @@ class Ui_ServerWindow(object):
 
     def retranslateUi(self, ServerWindow):
         ServerWindow.setWindowTitle(QtGui.QApplication.translate("ServerWindow", "1 Control", None, QtGui.QApplication.UnicodeUTF8))
-        self.lineedit.setText(QtGui.QApplication.translate("ServerWindow", "Type something and hit enter", None, QtGui.QApplication.UnicodeUTF8))
+        self.label.setText(QtGui.QApplication.translate("ServerWindow", "IP Address", None, QtGui.QApplication.UnicodeUTF8))
+        self.pp_client_status.setText(QtGui.QApplication.translate("ServerWindow", "<font color=green>Connected</font>", None, QtGui.QApplication.UnicodeUTF8))
+        self.vmix_client_status.setText(QtGui.QApplication.translate("ServerWindow", "<font color=red>Not Connected</font>", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_3.setText(QtGui.QApplication.translate("ServerWindow", "vMix PC", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_4.setText(QtGui.QApplication.translate("ServerWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Server</span></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_2.setText(QtGui.QApplication.translate("ServerWindow", "PowerPoint PC", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_5.setText(QtGui.QApplication.translate("ServerWindow", "Last Key", None, QtGui.QApplication.UnicodeUTF8))
+        self.last_key.setText(QtGui.QApplication.translate("ServerWindow", "[NONE]", None, QtGui.QApplication.UnicodeUTF8))
 
