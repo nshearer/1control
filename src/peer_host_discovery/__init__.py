@@ -1,0 +1,1 @@
+'''Contains objects used to discover other peers for an application'''
