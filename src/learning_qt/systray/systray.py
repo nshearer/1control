@@ -43,6 +43,7 @@
 #sip.setapi('QVariant', 2)
 
 from PySide import QtCore, QtGui
+from PySide import QtSvg, QtXml
 
 import systray_rc
 
@@ -210,15 +211,15 @@ class Window(QtGui.QDialog):
                 triggered=QtGui.qApp.quit)
 
     def createTrayIcon(self):
-         self.trayIconMenu = QtGui.QMenu(self)
-         self.trayIconMenu.addAction(self.minimizeAction)
-         self.trayIconMenu.addAction(self.maximizeAction)
-         self.trayIconMenu.addAction(self.restoreAction)
-         self.trayIconMenu.addSeparator()
-         self.trayIconMenu.addAction(self.quitAction)
-
-         self.trayIcon = QtGui.QSystemTrayIcon(self)
-         self.trayIcon.setContextMenu(self.trayIconMenu)
+        self.trayIconMenu = QtGui.QMenu(self)
+        self.trayIconMenu.addAction(self.minimizeAction)
+        self.trayIconMenu.addAction(self.maximizeAction)
+        self.trayIconMenu.addAction(self.restoreAction)
+        self.trayIconMenu.addSeparator()
+        self.trayIconMenu.addAction(self.quitAction)
+        
+        self.trayIcon = QtGui.QSystemTrayIcon(self)
+        self.trayIcon.setContextMenu(self.trayIconMenu)
 
 
 if __name__ == '__main__':
